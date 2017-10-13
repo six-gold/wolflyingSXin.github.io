@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java Concurrency | wolflyingSXin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Java ConcurrencyDefining and Starting a Thread Provide a Runnable object  123456789101112131415161718public class HelloRunnable implements Runnable &amp;#123;  public void run() &amp;#123;    // doing some wo">
+  <meta name="description" content="Java ConcurrencyProcesses and ThreadsA process has a self-contained execution environment. A process generally has a complete, private set of basic run-time resources; in particular, each process has">
 <meta name="keywords" content="java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java Concurrency">
 <meta property="og:url" content="http://yoursite.com/2017/10/13/Java-Concurrency/index.html">
 <meta property="og:site_name" content="wolflyingSXin的博客">
-<meta property="og:description" content="Java ConcurrencyDefining and Starting a Thread Provide a Runnable object  123456789101112131415161718public class HelloRunnable implements Runnable &amp;#123;  public void run() &amp;#123;    // doing some wo">
-<meta property="og:updated_time" content="2017-10-13T01:18:58.630Z">
+<meta property="og:description" content="Java ConcurrencyProcesses and ThreadsA process has a self-contained execution environment. A process generally has a complete, private set of basic run-time resources; in particular, each process has">
+<meta property="og:updated_time" content="2017-10-13T07:16:44.171Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java Concurrency">
-<meta name="twitter:description" content="Java ConcurrencyDefining and Starting a Thread Provide a Runnable object  123456789101112131415161718public class HelloRunnable implements Runnable &amp;#123;  public void run() &amp;#123;    // doing some wo">
+<meta name="twitter:description" content="Java ConcurrencyProcesses and ThreadsA process has a self-contained execution environment. A process generally has a complete, private set of basic run-time resources; in particular, each process has">
   
     <link rel="alternative" href="/atom.xml" title="wolflyingSXin的博客" type="application/atom+xml">
   
@@ -166,11 +166,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Java-Concurrency"><a href="#Java-Concurrency" class="headerlink" title="Java Concurrency"></a><center>Java Concurrency</center></h3><h4 id="Defining-and-Starting-a-Thread"><a href="#Defining-and-Starting-a-Thread" class="headerlink" title="Defining and Starting a Thread"></a>Defining and Starting a Thread</h4><ol>
+        <h3 id="Java-Concurrency"><a href="#Java-Concurrency" class="headerlink" title="Java Concurrency"></a><center>Java Concurrency</center></h3><h4 id="Processes-and-Threads"><a href="#Processes-and-Threads" class="headerlink" title="Processes and Threads"></a>Processes and Threads</h4><p>A process has a self-contained execution environment. A process generally has a complete, private set of basic run-time resources; in particular, each process has its own memory space.</p>
+<p>Processes are often seen as synonymous with programs or applications. However, what the user sees as a single application may in fact be a set of cooperating process. To faciliate communication between processes, most operating systems support <em>Inter Process Communication(IPC)</em> resources, such as pipes and sockets.</p>
+<p>Threads are sometimes called <em>lightweight</em> process. Both processes and threads provide an execution environment, but creating a new thread requires fewer resources than creating a new process.</p>
+<p>Threads exist within a process - every process has at least one. Threads share the process’s resources, including memory an open files.<br><a id="more"></a></p>
+<h4 id="Defining-and-Starting-a-Thread"><a href="#Defining-and-Starting-a-Thread" class="headerlink" title="Defining and Starting a Thread"></a>Defining and Starting a Thread</h4><ol>
 <li>Provide a Runnable object</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">// doing some work</span></div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line"></div><div class="line">    (<span class="keyword">new</span> Thread(<span class="keyword">new</span> HelloRunnable())).start();</div><div class="line"></div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
 <ol>
 <li>Subclass Thread</li>
 </ol>
