@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017 | wolflyingSXin的博客</title>
+  <title>Java Collection | wolflyingSXin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="中国地址大学(武汉)10级, 计算机科学与技术专业(本科)">
-<meta name="keywords" content="Java,Spark&#x2F;Hadoop,大数据,Python">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wolflyingSXin的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="CollectionsThe collections framework is a unified architecture for representing and manipulating collections, enabling them to be manipulated independently of the details of their representation. It r">
+<meta name="keywords" content="java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Collection">
+<meta property="og:url" content="http://yoursite.com/2017/10/22/Java-Collection/index.html">
 <meta property="og:site_name" content="wolflyingSXin的博客">
-<meta property="og:description" content="中国地址大学(武汉)10级, 计算机科学与技术专业(本科)">
+<meta property="og:description" content="CollectionsThe collections framework is a unified architecture for representing and manipulating collections, enabling them to be manipulated independently of the details of their representation. It r">
+<meta property="og:updated_time" content="2017-10-22T14:08:52.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wolflyingSXin的博客">
-<meta name="twitter:description" content="中国地址大学(武汉)10级, 计算机科学与技术专业(本科)">
+<meta name="twitter:title" content="Java Collection">
+<meta name="twitter:description" content="CollectionsThe collections framework is a unified architecture for representing and manipulating collections, enabling them to be manipulated independently of the details of their representation. It r">
   
     <link rel="alternative" href="/atom.xml" title="wolflyingSXin的博客" type="application/atom+xml">
   
@@ -145,36 +146,163 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java-Collection" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java Collection
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/22/Java-Collection/" class="archive-article-date">
+
+        
+        <a href="/2017/10/22/Java-Collection/" class="archive-article-date">
   	<time datetime="2017-10-22T14:05:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/22/Java-Collection/">Java Collection</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h3><p>The collections framework is a unified architecture for representing and manipulating collections, enabling them to be manipulated independently of the details of their representation. It reduces programming effort while increasing performance. It enables interoperability among unrelated APIs, reduces effort in designing and learning new APIs, and fosters software reuse. The framework is based on more than a dozen collection interfaces. It includes implementations of these interfaces and algorithms to manipulate them.</p>
+<a id="more"></a>
+<h4 id="Collection-interfaces-hierarchy"><a href="#Collection-interfaces-hierarchy" class="headerlink" title="Collection interfaces hierarchy"></a>Collection interfaces hierarchy</h4><ul>
+<li><p>Collection</p>
+<ul>
+<li><p>Set (interface)</p>
+<ul>
+<li><p>SortedSet (interface)</p>
+<ul>
+<li>NavigableSet (interface) extends <strong>SortedSet</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>List (interface)</p>
+</li>
+<li><p>Queue (interface)</p>
+</li>
+<li><p>Deque (interface)</p>
+</li>
+</ul>
+</li>
+<li><p>Map (interface)</p>
+<ul>
+<li>SortedMap (interface)</li>
+</ul>
+</li>
+</ul>
+<h4 id="Abstract-Class"><a href="#Abstract-Class" class="headerlink" title="Abstract Class"></a>Abstract Class</h4><ul>
+<li><p><strong>AbstractCollection</strong> implements <strong>Collection</strong></p>
+<ul>
+<li><p><strong>AbstractList</strong> extends <strong>AbstractCollection</strong> implements <strong>List</strong></p>
+<ul>
+<li><strong>AbstractSequentialList</strong> extends <strong>AbstractList</strong></li>
+</ul>
+</li>
+<li><p><strong>AbstractSet</strong> extends <strong>AbstractCollection</strong> implements <strong>Set</strong></p>
+</li>
+</ul>
+</li>
+<li><p><strong>AbstractMap</strong> implements <strong>Map</strong></p>
+</li>
+<li><p><strong>AbstractQueue</strong> extends <strong>AbstractCollection</strong> implements <strong>Queue</strong></p>
+</li>
+</ul>
+<h5 id="Collections-Implements"><a href="#Collections-Implements" class="headerlink" title="Collections Implements"></a>Collections Implements</h5><ul>
+<li><p>Collection</p>
+<ul>
+<li><p>Set</p>
+<ul>
+<li><p><strong>HashSet</strong> extends <strong>AbstractSet</strong> implements <strong>Set</strong></p>
+<ul>
+<li>backed by a hash table (actually a <strong>HashMap</strong> instance). It makes no guarantees as to the iteration order of the set. This class permits the <strong>null</strong> element.</li>
+</ul>
+</li>
+<li><p><strong>LinkedHashSet</strong> extends <strong>HashSet</strong> implements <strong>Set</strong></p>
+<ul>
+<li>Hash table and linked list implements of the Set interface, with predictable iteration order. map =&gt; <strong>LinkedHashMap</strong></li>
+</ul>
+</li>
+<li><p><strong>TreeSet</strong> extends <strong>AbstractSet</strong> implements <strong>NavigableSet</strong></p>
+<ul>
+<li>A <strong>NavigableSet</strong> implemention based on a <strong>TreeMap</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>List</p>
+<ul>
+<li><p>AbstractList extends <strong>AbstractCollection</strong> implements <strong>List</strong></p>
+<ul>
+<li><p>ArrayList extends <strong>AbstractList</strong> implements <strong>List</strong></p>
+<ul>
+<li>permits all elements, including <strong>null</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>LinkedList extends <strong>AbstractSequentialList</strong> implements <strong>List</strong></p>
+<ul>
+<li>Doubly-linked list implemention of <em>List</em> and <em>Deque</em> interface.</li>
+</ul>
+</li>
+<li><p>Vector extends <strong>AbstractList</strong> implements <strong>List</strong></p>
+<ul>
+<li><strong>synchronized</strong></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Queue</p>
+</li>
+<li><p>Deque</p>
+</li>
+</ul>
+</li>
+<li><p>Map</p>
+<ul>
+<li><p>SortedMap (interface)</p>
+<ul>
+<li><p>NavigableMap extends SortedMap (interface)</p>
+<ul>
+<li><p><strong>TreeMap</strong> extends <strong>AbstractMap</strong> implements <strong>NavigableMap</strong></p>
+<ul>
+<li>A Red-Black tree based <strong>NavigableMap</strong> implements.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>HashMap</strong> extends <strong>AbstractMap</strong> implements <strong>Map</strong></p>
+<ul>
+<li>permits <em>null</em> values and <em>null*</em> key</li>
+</ul>
+</li>
+<li><p><strong>LinkedHashMap</strong> extends <strong>HashMap</strong> implements <strong>Map</strong></p>
+<ul>
+<li>A special <strong>LinkedHashMap(int,float,boolean)</strong> constructor is provided to create a linked hash map whose order of iteration is the order in which its entries were last accessed.</li>
+</ul>
+</li>
+<li><p><strong>HashTable</strong> extends <strong>Dictionary</strong> implements <strong>Map</strong></p>
+<ul>
+<li>Any non-null object can be used as a key or as a value</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
-        <div class="article-info info-on-right">
-          
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -186,171 +314,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/22/Java-Collection/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/Java-IO/" class="archive-article-date">
-  	<time datetime="2017-10-13T06:20:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/13/Java-IO/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java IO</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/Java-IO/">Java IO</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/Java-Concurrency/" class="archive-article-date">
-  	<time datetime="2017-10-13T06:20:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/Java-Concurrency/">Java Concurrency</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">java</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/Debug-Spark/" class="archive-article-date">
-  	<time datetime="2017-10-13T03:35:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/Debug-Spark/">Debug Spark</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spark</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/13/How-Spark-run-an-application/" class="archive-article-date">
-  	<time datetime="2017-10-13T03:35:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/13/How-Spark-run-an-application/">How Spark run an application</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">spark</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -373,8 +436,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
